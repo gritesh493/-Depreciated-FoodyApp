@@ -63,3 +63,9 @@ body{
     margin: 5px;
     padding: 2px 6px;
 }
+.search-container{
+    flex-basis: 100vw;
+    margin: auto;
+    margin-left: 2rem;
+    padding: 0 2rem;
+}
