@@ -1,3 +1,4 @@
+import logo from "../../logo.png"
 const Header=()=>{
     return(
         <div className="header">
@@ -18,7 +19,7 @@ const Header=()=>{
 const Title=()=>{
     return(
         <a href="/">
-            <img className="logo" alt="logo" src={"./logo"/*to insert a local image first import it*/} />  
+            <img className="logo" alt="logo" src={logo/*to insert a local image first import it from - "../../logo.png"*/} />  
         </a>
     );
 }
