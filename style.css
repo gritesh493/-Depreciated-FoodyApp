@@ -44,4 +44,22 @@ body{
 .card{
     margin:2rem;
     padding:2rem;
+    width: 15vw;
+}
+.body>.card>img{
+    width: 15vw;
+}
+
+.cuisine-tag-container{
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.tag{
+    background-color: rgba(175, 251, 152, 0.721);
+    border: 2px solid rgb(126, 210, 0);
+    border-radius: 1em;
+    margin: 5px;
+    padding: 2px 6px;
 }

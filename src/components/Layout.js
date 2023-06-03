@@ -5,9 +5,9 @@ import { Footer } from "./Footer";
 export const Layout=()=>{
     return(
     <>
-    <Header/>   {/**Header, Title component */}
-    <Body/>     {/**RestrauntCards, SearchBar */}
-    <Footer/>
+    <Header key={"a"}/>   {/**Header, Title component */}
+    <Body key={"b"}/>     {/**RestrauntCards, SearchBar */}
+    <Footer key={"c"}/>
     </>
     );
 }
