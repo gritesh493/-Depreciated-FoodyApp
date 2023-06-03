@@ -1,6 +1,11 @@
+import { useState } from "react";
+
 export const Search=()=>{
-    return(<div className="search-container">
-        <input type="textbox" placeholder="Search"></input>
-        <button className="btn">Search</button>
+    const [searchText,setSearchText]=useState("");    //Must be inside functional component.
+
+    return(
+    <div className="search-container">
+        <input type="text" placeholder="Search" value={searchText} onChange={(e)=>{setSearchText(e.target.value)}}></input>
+        <button className="btn" >Search</button>
     </div>);
 }
