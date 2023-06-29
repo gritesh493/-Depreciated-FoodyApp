@@ -8,7 +8,7 @@ export const RestrauntCard=(props)=>{
             <h2>{props.details.data.name}</h2>
             <h4 className={"cuisine-tag-container"}>{props.details.data.cuisines.map((ele)=>{
                 count++;
-                return (<CuisinesTag item={ele} key={`${props.details.data.id}-key-${count}`}/>)})}</h4>
+                return (<CuisinesTag item={ele} setRestaurant={props.setRestaurant} restaurant={props.restaurant} data={props.data} key={`${props.details.data.id}-key-${count}`}/>)})}</h4>
             <h4>{props.details.data.avgRating} ⭐</h4>
         </div>
     );

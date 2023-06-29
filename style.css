@@ -67,6 +67,7 @@ body{
     border-radius: 1em;
     margin: 5px;
     padding: 2px 6px;
+    cursor: pointer;
 }
 .search-container{
     flex-basis: 90vw;
