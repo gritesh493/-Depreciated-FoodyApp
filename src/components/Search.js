@@ -6,6 +6,8 @@ export const Search=(props)=>{
 
     
     async function filterdata(text){
+        // const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=22.6012849&lng=88.3312686&page_type=DESKTOP_WEB_LISTING");
+        //TODO: While fetching, shimmer must be shownon body, and after that rendered content must also be rendered in the body.
         data= await props.restaurant;
         console.log(data)
         let details="";

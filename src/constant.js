@@ -1,4 +1,4 @@
-export const Logo_URL="Here Should be a logo URL"   //!To be updated later in the project.
+export const Logo_URL="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/"   //!To be updated later in the project.
 
 export const data=
     [
