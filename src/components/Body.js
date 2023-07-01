@@ -1,9 +1,7 @@
 import { useEffect, useState } from "react";
 import { RestrauntCard } from "./RestaurantCard";
-import { data } from "../constant.js"
 import { Search } from "./Search";
 import {ShimmerUI} from "./ShimmerUI";
-// import {Filter} from "./Filter";
 
 export const Body=()=>{
 
@@ -18,8 +16,8 @@ export const Body=()=>{
 
     useEffect(()=>{
         getRestraunts().catch( e => { console.error(e) });
-    },[]);  //!TODO Fetch data whenever tags are clicked and search button is clicked //Here data layer and ui layer is not seperated properly
-
+    },[]);  //!TODO: Fetch data whenever tags are clicked and search button is clicked //Here data layer and ui layer is not seperated properly
+            //!TODO:⭐⭐⭐ use useeffect + Fetch api for each of the Components.
     
     return (
         <div className="body">
