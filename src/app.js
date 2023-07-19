@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { Layout } from "./components/Layout";
 import{createBrowserRouter, RouterProvider} from "react-router-dom";
+import { Layout } from "./components/Layout";
 import About from "./components/About";
 import Error from "./components/Error";
 import { Body } from "./components/Body";

@@ -1,6 +1,11 @@
+import { useState } from "react";
 import logo from "../../logo.png"
 import {Link} from "react-router-dom"
+import useOnline from "../utils/useOnline";
+
 const Header=()=>{
+    const isOnline=useOnline();
+    console.log(isOnline)
     return(
         <div className="header">
             <Title/>
@@ -10,6 +15,7 @@ const Header=()=>{
                     <li><Link to="/about">About</Link></li>
                     <li>Contact</li>
                     <li>Cart</li>
+                    <li>{isOnline?'🟢- Online':'❌- Offline'}</li>
                 </ul>
             </div>
         </div>
