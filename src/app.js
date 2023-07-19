@@ -1,4 +1,4 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import{createBrowserRouter, RouterProvider} from "react-router-dom";
 import { Layout } from "./components/Layout";
@@ -6,7 +6,9 @@ import About from "./components/About";
 import Error from "./components/Error";
 import { Body } from "./components/Body";
 import RestaurantDetails from "./components/ReataurantDetails";
-import Instamart from "./components/instamart";
+import { ShimmerUI } from "./components/ShimmerUI";
+
+const Instamart=lazy(()=>import("./components/instamart")); //Lazy Loading done.    //--add <Suspence fallback={<Shimmer/>}>
 
 const appRouter=createBrowserRouter([
     {
@@ -28,7 +30,7 @@ const appRouter=createBrowserRouter([
             },
             {
                 path:'/instamart',
-                element:<Instamart/>
+                element:<Suspense fallback={<ShimmerUI/>}><Instamart/></Suspense>
             }
         ]
     },
