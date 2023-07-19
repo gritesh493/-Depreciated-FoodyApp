@@ -11,6 +11,6 @@ export const CuisinesTag=(props)=>{
     }
 
     return(
-        <div className="tag" key={count} onClick={()=>filterdata(props.item,props.restaurant)}>{props.item}</div>
+        <div className="tag bg-green-300 rounded-full border-green-700 border-2 m-2 px-3 py-0 cursor-pointer hover:bg-lime-300 inline-block" key={count} onClick={()=>filterdata(props.item,props.restaurant)}>{props.item}</div>
     );
 }

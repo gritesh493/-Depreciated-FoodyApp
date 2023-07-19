@@ -20,7 +20,7 @@ export const Body=()=>{
             //!TODO:⭐⭐⭐ use useeffect + Fetch api for each of the Components.
     
     return (
-        <div className="body">
+        <div className="body flex-row flex-wrap content-center m-8 inline-flex">
 
             <Search setUiData={setRestaurant} restaurant={restaurant}/>
             {/* <Filter setUiData={setRestaurant}/> */}

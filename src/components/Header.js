@@ -7,16 +7,16 @@ const Header=()=>{
     const isOnline=useOnline();
     console.log(isOnline)
     return(
-        <div className="header">
+        <div className="header mb-1 flex h-20 w-full flex-row justify-between align-middle shadow-lg">
             <Title/>
-            <div className="nav-items">
-                <ul>
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/about">About</Link></li>
-                    <li>Contact</li>
-                    <li>Cart</li>
-                    <li><Link to="/instamart">Instamart</Link></li>
-                    <li>{isOnline?'🟢- Online':'❌- Offline'}</li>
+            <div className="nav-items w-full mr-10 ml-60 my-auto">
+                <ul className="flex justify-around content-center pl-40">
+                    <li className="hover:bg-gray-200 m-4 py-1 px-4 rounded-full"><Link to="/">Home</Link></li>
+                    <li className="hover:bg-gray-200 m-4 py-1 px-4 rounded-full"><Link to="/about">About</Link></li>
+                    <li className="hover:bg-gray-200 m-4 py-1 px-4 rounded-full">Contact</li>
+                    <li className="hover:bg-gray-200 m-4 py-1 px-4 rounded-full">Cart</li>
+                    <li className="hover:bg-gray-200 m-4 py-1 px-4 rounded-full"><Link to="/instamart">Instamart</Link></li>
+                    <li className="border-2 border-gray-200 m-4 py-1 px-4 rounded-full">{isOnline?'🟢- Online':'❌- Offline'}</li>
                 </ul>
             </div>
         </div>
@@ -26,8 +26,8 @@ const Header=()=>{
 
 const Title=()=>{
     return(
-        <a href="/">
-            <img className="logo" alt="logo" src={logo/*to insert a local image first import it from - "../../logo.png"*/} />  
+        <a href="/" className="ml-10 pl-10 my-auto">
+            <img className="logo w-28" alt="logo" src={logo/*to insert a local image first import it from - "../../logo.png"*/} />  
         </a>
     );
 }
