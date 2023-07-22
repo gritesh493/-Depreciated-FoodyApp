@@ -1,11 +1,12 @@
 import { useState } from "react";
 
 const Section=({title,description,isVisible,setIsVisible})=>{
+    let [toggleHide,setToggleHide]=useState(false);
     return(
         <>
         <h1 className="font-bold text-lg">{title}</h1>
-        {isVisible?<button onClick={()=>{setIsVisible()}}>Hide</button>:<button onClick={()=>{setIsVisible();}}>Show</button>}
-        {isVisible && <p >{description}</p>}
+        {!toggleHide && isVisible?<button onClick={()=>{setToggleHide(true)}}>Hide</button>:<button onClick={()=>{setIsVisible();setToggleHide(false)}}>Show</button>}
+        {!toggleHide && isVisible && <p >{description}</p>}
         </>
     );
 }
