@@ -10,8 +10,8 @@ export const RestrauntCard=(props)=>{
     // console.log(props.details.data.avgRating);
     return(
         <div className="card m-5 p-5 w-80 hover:shadow-xl flex-col align-middle">
-            <h1>{user}</h1>
-            <h1>{email}</h1>
+            {/* <h1>{user}</h1>
+            <h1>{email}</h1> */}
             
             <Link to={`/restaurant/${props.details.info.id}`}>
                 <img src={Logo_URL + props.details.info.cloudinaryImageId}className="w-auto p-2 center"/>
