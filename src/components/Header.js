@@ -2,8 +2,14 @@ import { useState } from "react";
 import logo from "../../logo.png"
 import {Link} from "react-router-dom"
 import useOnline from "../utils/useOnline";
+import {useSelector} from "react-redux";
+// import store from "../utils/store";
 
 const Header=()=>{
+
+    const cartItems=useSelector(state=>state.cart.items);
+    console.log(cartItems);
+    
     const isOnline=useOnline();
     console.log(isOnline)
     return(
@@ -14,7 +20,7 @@ const Header=()=>{
                     <li className="hover:bg-gray-200 m-4 py-1 px-4 rounded-full"><Link to="/">Home</Link></li>
                     <li className="hover:bg-gray-200 m-4 py-1 px-4 rounded-full"><Link to="/about">About</Link></li>
                     <li className="hover:bg-gray-200 m-4 py-1 px-4 rounded-full"><Link to="/contact">Contact</Link></li>
-                    <li className="hover:bg-gray-200 m-4 py-1 px-4 rounded-full">Cart</li>
+                    <li className="hover:bg-gray-200 m-4 py-1 px-4 rounded-full">Cart-{cartItems.length}</li>
                     <li className="hover:bg-gray-200 m-4 py-1 px-4 rounded-full"><Link to="/instamart">Instamart</Link></li>
                     <li className="border-2 border-gray-200 m-4 py-1 px-4 rounded-full">{isOnline?'🟢- Online':'❌- Offline'}</li>
                 </ul>
