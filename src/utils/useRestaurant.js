@@ -9,8 +9,8 @@ const useRestaurant=(id)=>{
         const data = await fetch(FETCH_RESTAURANT_URL);
         const json=await data.json();
         
-        const filteredRestaurant= await json?.data?.cards[2]?.data?.data?.cards?.filter((ele)=>{
-            if(ele.data.id==id)return true;
+        const filteredRestaurant= await json?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle?.restaurants?.filter((ele)=>{
+            if(ele.info.id==id)return true;
             else return false;
         });
 

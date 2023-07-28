@@ -6,7 +6,7 @@ export const CuisinesTag=(props)=>{
 
     //TODO- to make it realtime, we would have to do prop drilling inside of body's state to here...do it the better way.
     filterdata=(text,data)=>{
-        const details = data.filter((ele)=>{return(ele.data.cuisines.includes(text))}); //How to send props to sibling component ?
+        const details = data.filter((ele)=>{return(ele.info.cuisines.includes(text))}); //How to send props to sibling component ?
         props.setRestaurant(details);
     }
 
