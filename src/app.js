@@ -9,7 +9,7 @@ import RestaurantDetails from "./components/ReataurantDetails";
 import { ShimmerUI } from "./components/ShimmerUI";
 // import Instamart from "./components/Instamart";
 import Contact from "./components/Contact";
-import Cart from "./components/cart";
+import Cart from "./components/Cart";
 
 
 const Instamart=lazy(async()=>await(import("./components/Instamart"))); //Lazy Loading done.    //--add <Suspence fallback={<Shimmer/>}>

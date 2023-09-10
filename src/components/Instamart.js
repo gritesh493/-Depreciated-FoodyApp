@@ -5,7 +5,7 @@ const Section=({title,description,isVisible,setIsVisible})=>{
     return(
         <>
         <h1 className="font-bold text-lg">{title}</h1>
-        {!toggleHide && isVisible?<button onClick={()=>{setToggleHide(true)}}>Hide</button>:<button onClick={()=>{setIsVisible();setToggleHide(false)}}>Show</button>}
+        {!toggleHide && isVisible?<button className="rounded-sm border-gray-500" onClick={()=>{setToggleHide(true)}}>Hide</button>:<button className="rounded-sm border-gray-500" onClick={()=>{setIsVisible();setToggleHide(false)}}>Show</button>}
         {!toggleHide && isVisible && <p >{description}</p>}
         </>
     );

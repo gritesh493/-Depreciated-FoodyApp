@@ -12,7 +12,8 @@ export const Search=(props)=>{
         //TODO: While fetching, shimmer must be shown on body, and after that rendered content must also be rendered in the body.
         // data= await props.restaurant;
         console.log(json)
-        let details=await text==""? json?.data?.cards[2]?.data?.data?.cards : json?.data?.cards[2]?.data?.data?.cards.filter((ele)=>{return(ele.data.name.toLowerCase().includes(text.toLowerCase()))}); //!TODO=> if text="" Refetch data
+        details= await json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+        if(text!="")details=await json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants.filter((ele)=>{return(ele.info.name.toLowerCase().includes(text.toLowerCase()))}); //!TODO=> if text="" Refetch data
         console.log(details)
         props.setUiData(details);
     }
