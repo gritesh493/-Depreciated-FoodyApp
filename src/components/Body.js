@@ -12,9 +12,15 @@ export const Body = () => {
     );
     const json = await data.json();
     console.log(json);
-    setRestaurant(
+    const restaurantList =
       json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-    );
+        ?.length != undefined
+        ? json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
+            ?.restaurants
+        : json?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle
+            ?.restaurants;
+    console.log(restaurantList);
+    setRestaurant(restaurantList);
   }
 
   useEffect(() => {

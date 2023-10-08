@@ -33,7 +33,7 @@ const RestaurantDetails = () => {
           {/* <h5 className="m-2 p-2 text-lg font-semibold ">{restaurant[0]?.info?.address}</h5>
             <h3 className="m-2 p-2 text-lg font-semibold ">{restaurant[0]?.info?.costForTwoString}</h3> Not working*/}
           <h2 className="my-0 ml-0 p-2 text-lg font-semibold">
-            {Object.values(
+            {Object?.values(
               restaurant[0]?.info?.cuisines?.map((item) => {
                 return (
                   <li
