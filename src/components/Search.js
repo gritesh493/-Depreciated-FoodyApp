@@ -23,8 +23,8 @@ export const Search = (props) => {
     console.log(
       restaurantList[0].card?.card?.gridElements?.infoWithStyle?.restaurants
     );
-    details = await restaurantList[0].card?.card?.gridElements?.infoWithStyle
-      ?.restaurants;
+    let details = await restaurantList[0].card?.card?.gridElements
+      ?.infoWithStyle?.restaurants;
     if (text != "")
       details =
         await restaurantList[0].card?.card?.gridElements?.infoWithStyle?.restaurants.filter(
